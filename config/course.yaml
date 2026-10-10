@@ -1,0 +1,63 @@
+# Course metadata and directory conventions.
+# This configuration is declarative; no build script consumes it yet.
+schema_version: 1
+
+course:
+  title: Electrical Apprenticeship Course
+  description: Electrical theory, practical skills, and supervised exercises for apprentices.
+  language: en
+  status: draft
+  # Set these before publishing jurisdiction-specific instructional materials.
+  jurisdiction: null
+  electrical_code:
+    name: null
+    edition: null
+
+modules:
+  root: modules
+  number_start: 1
+  number_end: 20
+  number_padding: 2
+  directory_pattern: "{number}-{topic}"
+  # All topics have folders for numbers 01–20; lesson order is not defined yet.
+  topics:
+    - code: THEORY
+      title: Electrical Theory
+    - code: BENDING
+      title: Conduit Bending
+    - code: RESI
+      title: Residential Wiring
+    - code: XFRMR
+      title: Transformers
+    - code: CALC
+      title: Electrical Calculations
+    - code: HZRD
+      title: Electrical Hazards and Safety
+    - code: MOTOR
+      title: Motors
+    # Preserve the existing folder spelling.
+    - code: CONTOL
+      title: Controls
+    - code: PLC
+      title: Programmable Logic Controllers
+  content_files:
+    lesson: lesson.md
+    exercises: exercises.md
+    assessment: assessment.md
+    instructor_notes: instructor-notes.md
+
+# Paths are relative to the course repository root.
+paths:
+  templates: templates
+  diagrams: assets/diagrams
+  images: assets/images
+  audio: assets/audio
+  scripts: scripts
+
+exports:
+  docx:
+    output_directory: exports/docx
+  pdf:
+    output_directory: exports/pdf
+  # Keep answer keys and instructor guidance out of learner exports by default.
+  include_instructor_notes: false
