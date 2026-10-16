@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.agents/
+exports/docx/*
+exports/pdf/*
+!exports/**/.gitkeep
+web/node_modules/
+web/dist/
+web/public/audio/
+web/public/course.json
+imports/notebooklm/*.wav
+imports/notebooklm/*.m4a
+__pycache__/
+*.pyc

@@ -1,5 +1,5 @@
 # Course metadata and directory conventions.
-# This configuration is declarative; no build script consumes it yet.
+# Consumed by scripts/validate_modules.py and the build scripts.
 schema_version: 1
 
 course:
@@ -8,10 +8,10 @@ course:
   language: en
   status: draft
   # Set these before publishing jurisdiction-specific instructional materials.
-  jurisdiction: null
+  jurisdiction: United States
   electrical_code:
-    name: null
-    edition: null
+    name: NFPA 70 (NEC)
+    edition: 2023
 
 modules:
   root: modules
@@ -35,8 +35,7 @@ modules:
       title: Electrical Hazards and Safety
     - code: MOTOR
       title: Motors
-    # Preserve the existing folder spelling.
-    - code: CONTOL
+    - code: CONTROL
       title: Controls
     - code: PLC
       title: Programmable Logic Controllers

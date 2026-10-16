@@ -40,10 +40,9 @@ Module folders follow the convention `NN-TOPIC`, where `NN` is a two-digit numbe
 | `CALC` | Electrical calculations |
 | `HZRD` | Electrical hazards and safety |
 | `MOTOR` | Motors |
-| `CONTOL` | Controls |
+| `CONTROL` | Controls |
 | `PLC` | Programmable logic controllers |
 
-`CONTOL` preserves the spelling used when the folders were created. Use this exact code in paths unless the folders and their references are renamed together.
 
 ## Adding course materials
 
